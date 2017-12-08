@@ -175,6 +175,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+
+        // Email User Verification Service Provider
+        Jrean\UserVerification\UserVerificationServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],
@@ -226,6 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Email User Verification Facade
+        'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
     ],
 
 ];
