@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:300,400,700);/*!
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:300,400,700);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);/*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -356,7 +356,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.2;
   color: #292b2c;
   background-color: #ededed;
 }
@@ -4145,7 +4145,7 @@ tbody.collapse.show {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-height: 1.6rem;
+  min-height: 1.2rem;
   padding-left: 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
@@ -4184,7 +4184,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.3rem;
+  top: 0.1rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -6010,7 +6010,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .modal-body {
@@ -6077,7 +6077,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.6;
+  line-height: 1.2;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6189,7 +6189,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.6;
+  line-height: 1.2;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6665,7 +6665,10 @@ a.bg-inverse:hover {
   background-color: #101112 !important;
 }
 
-.border-0 {
+.border-0,
+.card .form-group .input-group .input-group-addon,
+.card .form-group input,
+.card .form-group .btn-auth {
   border: 0 !important;
 }
 
@@ -8261,7 +8264,8 @@ a.bg-inverse:hover {
   padding-left: 1rem !important;
 }
 
-.px-3 {
+.px-3,
+.card .card-half {
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -8326,7 +8330,8 @@ a.bg-inverse:hover {
   padding-left: 3rem !important;
 }
 
-.py-5 {
+.py-5,
+.card .card-half {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -9104,7 +9109,8 @@ a.bg-inverse:hover {
     padding-left: 3rem !important;
   }
 
-  .px-md-5 {
+  .px-md-5,
+  .card .card-half {
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
@@ -9951,7 +9957,8 @@ a.bg-inverse:hover {
   text-align: right !important;
 }
 
-.text-center {
+.text-center,
+.card .card-half {
   text-align: center !important;
 }
 
@@ -10015,7 +10022,8 @@ a.bg-inverse:hover {
   text-transform: lowercase !important;
 }
 
-.text-uppercase {
+.text-uppercase,
+.card .card-title {
   text-transform: uppercase !important;
 }
 
@@ -10027,7 +10035,8 @@ a.bg-inverse:hover {
   font-weight: normal;
 }
 
-.font-weight-bold {
+.font-weight-bold,
+.card .card-title {
   font-weight: bold;
 }
 
@@ -10035,7 +10044,8 @@ a.bg-inverse:hover {
   font-style: italic;
 }
 
-.text-white {
+.text-white,
+.card .form-group .btn-auth {
   color: #fff !important;
 }
 
@@ -10206,6 +10216,162 @@ a.text-gray-dark:hover {
   }
 }
 
+@font-face {
+  font-family: "Sansation";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/Sansation_Light.ttf?99f7456dfd298c4545c7687ce8d5539d) format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation";
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/Sansation_Light_Italic.ttf?4eada82e3afe6a8ce30851fd2ab32741) format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Sansation_Regular.ttf?14df84ca92de1925877ef2ea23edf8b0) format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation";
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/Sansation_Italic.ttf?294591ca29d14fb6b5c6d5bdf673183c) format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Sansation_Bold.ttf?09b89b19cd26e1247b508bf31284743a) format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation";
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/Sansation_Bold_Italic.ttf?ed9223b46a7767df0f842300f83ce157) format("truetype");
+}
+
+.h-70,
+.btn-xl {
+  height: 70px;
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+}
+
+.flex-1,
+.card .card-half {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.bg-none,
+.card .form-group .input-group .input-group-addon {
+  background: none !important;
+}
+
+.border-gray {
+  border: 2px solid #d6dee4;
+}
+
+.border-white {
+  border: 1px solid #e5e6ea;
+}
+
+.round,
+.card .form-group .btn-auth {
+  border-radius: 35px;
+}
+
+.round-left {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+
+.round-right {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.font-sansation,
+.card .card-title {
+  font-family: 'Sansation', 'Roboto', sans-serif;
+}
+
+.font-base,
+.card .form-group input,
+.card .form-group .btn-auth {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-big,
+.card .card-title {
+  font-size: 1.875rem !important;
+}
+
+.font-medium,
+.card .form-group input,
+.card .form-group .btn-auth,
+.card .form-group .btn-link {
+  font-size: 1.25rem;
+}
+
+.font-small {
+  font-size: .75rem;
+}
+
+.font-weight-light,
+.card .form-group .btn-link {
+  font-weight: lighter;
+}
+
+.text-spacing,
+.card .form-group input,
+.card .form-group .btn-auth {
+  letter-spacing: .125rem;
+}
+
+.color-gray,
+.card .form-group input,
+.card .form-group input::-webkit-input-placeholder,
+.card .form-group .btn-link {
+  color: #8b939b;
+}
+
+.color-gray,
+.card .form-group input,
+.card .form-group input:-ms-input-placeholder,
+.card .form-group .btn-link {
+  color: #8b939b;
+}
+
+.color-gray,
+.card .form-group input,
+.card .form-group input::-ms-input-placeholder,
+.card .form-group .btn-link {
+  color: #8b939b;
+}
+
+.color-gray,
+.card .form-group input,
+.card .form-group input::placeholder,
+.card .form-group .btn-link {
+  color: #8b939b;
+}
+
+.btn-xl {
+  padding: 1.25rem 2rem;
+}
+
 html,
 body {
   width: 100%;
@@ -10213,9 +10379,41 @@ body {
 }
 
 #app {
-  width: 100%;
-  height: 100%;
   background: url(/images/background.png?719c342be58e583579904fe3a509aa20) no-repeat center;
   background-size: cover;
+}
+
+.card.card-auth {
+  width: 1000px;
+  max-width: 100%;
+  -webkit-box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card .card-title {
+  color: #424242;
+}
+
+.card .card-right {
+  background-color: #373f45;
+}
+
+.card .form-group {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.card .form-group .input-group {
+  padding: .8rem;
+}
+
+.card .form-group .btn-auth {
+  width: 231px;
+}
+
+.card .form-group .btn-auth.btn-login {
+  background-color: #97bf5c;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(151, 192, 92, 0.6);
+  box-shadow: 0 5px 12px 0 rgba(151, 192, 92, 0.6);
 }
 

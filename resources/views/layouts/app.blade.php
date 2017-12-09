@@ -14,8 +14,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @yield('content')
+    <div class="w-100 h-100" id="app">
+        <div class="w-100 h-100 px-3 py-5 py-md-3 d-md-flex justify-content-center align-items-center overflow-scroll">
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->

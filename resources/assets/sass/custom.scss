@@ -1,12 +1,173 @@
+$gray-1: #8b939b;
+
+@mixin font-face($font-family, $font-style, $font-weight, $url, $format) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url($url) format($format);
+  }
+}
+
+@include font-face('Sansation', normal, 300, "../fonts/sansation/Sansation_Light.ttf", "truetype");
+@include font-face('Sansation', italic, 300, "../fonts/sansation/Sansation_Light_Italic.ttf", "truetype");
+@include font-face('Sansation', normal, 400, "../fonts/sansation/Sansation_Regular.ttf", "truetype");
+@include font-face('Sansation', italic, 400, "../fonts/sansation/Sansation_Italic.ttf", "truetype");
+@include font-face('Sansation', normal, 700, "../fonts/sansation/Sansation_Bold.ttf", "truetype");
+@include font-face('Sansation', italic, 700, "../fonts/sansation/Sansation_Bold_Italic.ttf", "truetype");
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($offset, $distance, $size, $spread, $color) {
+  -webkit-box-shadow: $offset $distance $size $spread $color;
+  -moz-box-shadow: $offset $distance $size $spread $color;
+  box-shadow: $offset $distance $size $spread $color;
+}
+
+.h-70 {
+  height: 70px;
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-none {
+  background: none !important;
+}
+
+.border-gray {
+  border: 2px solid #d6dee4;
+}
+
+.border-white {
+  border: 1px solid #e5e6ea;
+}
+
+.round {
+  @include border-radius(35px);
+}
+
+.round-left {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+
+.round-right {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.font-sansation {
+  font-family: 'Sansation', 'Roboto', sans-serif;
+}
+
+.font-base {
+  font-family: $font-family-base;
+}
+
+.font-big {
+  font-size: 1.875rem !important;
+}
+
+.font-medium {
+  font-size: 1.25rem;
+}
+
+.font-small {
+  font-size: .75rem;
+}
+
+.font-weight-light {
+  font-weight: lighter;
+}
+
+.text-spacing {
+  letter-spacing: .125rem;
+}
+
+.color-gray {
+  color: $gray-1;
+}
+
+.btn-xl {
+  @extend .h-70;
+  padding: 1.25rem 2rem;
+}
+
 html, body {
   width: 100%;
   height: 100%;
 }
 
 #app {
-  width: 100%;
-  height: 100%;
   background: url("../images/background.png") no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
+}
+
+.card {
+  &.card-auth {
+    width: 1000px;
+    max-width: 100%;
+    @include box-shadow(0, 10px, 100px, 0, rgba(0, 0, 0, .3));
+  }
+
+  .card-title {
+    @extend .font-sansation, .font-big, .font-weight-bold, .text-uppercase;
+    color: #424242;
+  }
+
+  .card-half {
+    @extend .flex-1, .px-3, .px-md-5, .py-5, .text-center;
+  }
+
+  .card-right {
+    background-color: #373f45;
+  }
+
+  .form-group {
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+    .input-group {
+      padding: .8rem;
+
+      .input-group-addon {
+        @extend .bg-none, .border-0;
+      }
+    }
+
+    input {
+      @extend .border-0, .font-base, .font-medium, .color-gray, .text-spacing;
+
+      &::placeholder {
+        @extend .color-gray;
+      }
+    }
+
+    .btn-auth {
+      width: 231px;
+      @extend .border-0, .round, .font-base, .font-medium, .text-white, .text-spacing;
+
+      &.btn-login {
+        background-color: #97bf5c;
+        @include box-shadow(0, 5px, 12px, 0, rgba(151, 192, 92, .6));
+      }
+    }
+
+    .btn-link {
+      @extend .font-medium;
+      @extend .font-weight-light;
+      @extend .color-gray;
+    }
+  }
 }
