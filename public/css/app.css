@@ -10031,7 +10031,8 @@ a.bg-inverse:hover {
   text-transform: capitalize !important;
 }
 
-.font-weight-normal {
+.font-weight-normal,
+.card .form-group .btn-link {
   font-weight: normal;
 }
 
@@ -10329,9 +10330,8 @@ a.text-gray-dark:hover {
   font-size: .75rem;
 }
 
-.font-weight-light,
-.card .form-group .btn-link {
-  font-weight: lighter;
+.font-weight-light {
+  font-weight: lighter !important;
 }
 
 .text-spacing,
@@ -10415,5 +10415,10 @@ body {
   background-color: #97bf5c;
   -webkit-box-shadow: 0 5px 12px 0 rgba(151, 192, 92, 0.6);
   box-shadow: 0 5px 12px 0 rgba(151, 192, 92, 0.6);
+}
+
+.card .form-group .btn-auth.btn-social {
+  border: 2px solid #d6dee4 !important;
+  color: #8b939b !important;
 }
 

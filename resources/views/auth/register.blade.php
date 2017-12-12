@@ -1,91 +1,149 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+    <div class="card card-auth m-auto px-3 px-md-5 py-5 border-0 rounded-0 text-center">
+        <div class="card-title">Registration</div>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+        <form class="form-horizontal px-4" method="POST" action="{{ route('register') }}">
+            {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label for="first_name" class="col-md-4 control-label">First Name</label>
-
-                            <div class="col-md-6">
-                                <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
-
-                                @if ($errors->has('first_name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('first_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="first_name-addon">
+                                <img src="images/ico_user.png">
+                            </span>
+                            <input id="first_name" type="text" name="first_name" value="{{ old('first_name') }}"
+                                   placeholder="First Name" class="form-control"
+                                   aria-describedby="first_name-addon" required autofocus>
                         </div>
 
-                        <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                            <label for="last_name" class="col-md-4 control-label">Last Name</label>
+                        @if ($errors->has('first_name'))
+                            <span class="help-block"><strong>{{ $errors->first('first_name') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
 
-                            <div class="col-md-6">
-                                <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required>
-
-                                @if ($errors->has('last_name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('last_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('last_name') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="last_name-addon">
+                                <img src="images/ico_user.png">
+                            </span>
+                            <input id="last_name" type="text" name="last_name" value="{{ old('last_name') }}"
+                                   placeholder="Last Name" class="form-control"
+                                   aria-describedby="last_name-addon" required>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                        @if ($errors->has('last_name'))
+                            <span class="help-block"><strong>{{ $errors->first('last_name') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('gender') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="gender-addon">
+                                <img src="images/ico_user.png">
+                            </span>
+                            <input id="gender" type="text" name="gender" value="{{ old('gender') }}"
+                                   placeholder="Gender" class="form-control"
+                                   aria-describedby="gender-addon" required>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                        @if ($errors->has('gender'))
+                            <span class="help-block"><strong>{{ $errors->first('gender') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('age') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="age-addon">
+                                <img src="images/ico_user.png">
+                            </span>
+                            <input id="age" type="text" name="age" value="{{ old('age') }}" placeholder="Age"
+                                   class="form-control" aria-describedby="age-addon" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                        @if ($errors->has('age'))
+                            <span class="help-block"><strong>{{ $errors->first('age') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="email-addon">
+                                <img src="images/ico_email.png">
+                            </span>
+                            <input id="email" type="email" name="email" value="{{ old('email') }}"
+                                   placeholder="E-mail" class="form-control" aria-describedby="email-addon" required>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
+                        @if ($errors->has('email'))
+                            <span class="help-block"><strong>{{ $errors->first('email') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="input-group h-70 border-gray round">
+                            <span class="input-group-addon" id="password-addon">
+                                <img src="images/ico_lock.png">
+                            </span>
+                            <input id="password" type="password" name="password" placeholder="*********"
+                                   class="form-control" aria-describedby="password-addon" required>
                         </div>
-                    </form>
+
+                        @if ($errors->has('password'))
+                            <span class="help-block"><strong>{{ $errors->first('password') }}</strong></span>
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-auth btn-login h-70 mt-3">Sign Up</button>
+            </div>
+
+            <div class="form-group mt-3">
+                <span class="mt-5 font-medium font-weight-light color-gray">
+                    When you register you agree with our <a href="/privacy-policy" class="btn-link">
+                    Privacy Policy</a> and <a href="/terms-of-use" class="btn-link"> Terms of Use</a>
+                </span>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group mt-3">
+                    <button class="btn btn-auth btn-social h-70">
+                        ﻿<i class="fa fa-twitter" aria-hidden="true"></i> With Twitter
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mt-3">
+                    <button class="btn btn-auth btn-social h-70">
+                        ﻿<i class="fa fa-facebook" aria-hidden="true"></i> With Facebook
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mt-3">
+                    <button class="btn btn-auth btn-social h-70">
+                        ﻿<i class="fa fa-google-plus" aria-hidden="true"></i> With Google
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

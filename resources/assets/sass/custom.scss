@@ -87,7 +87,7 @@ $gray-1: #8b939b;
 }
 
 .font-weight-light {
-  font-weight: lighter;
+  font-weight: lighter !important;
 }
 
 .text-spacing {
@@ -162,11 +162,16 @@ html, body {
         background-color: #97bf5c;
         @include box-shadow(0, 5px, 12px, 0, rgba(151, 192, 92, .6));
       }
+
+      &.btn-social {
+        border: 2px solid #d6dee4 !important;
+        color: $gray-1 !important;
+      }
     }
 
     .btn-link {
       @extend .font-medium;
-      @extend .font-weight-light;
+      @extend .font-weight-normal;
       @extend .color-gray;
     }
   }

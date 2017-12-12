@@ -41,14 +41,14 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-auth btn-login h-70 mt-3">Login</button>
 
-                    <a class="btn btn-link mt-3 d-block" href="{{ route('password.request') }}">
+                    <a class="btn btn-link mt-3 d-block font-weight-light" href="{{ route('password.request') }}">
                         Forgot your password?
                     </a>
                 </div>
 
                 <div class="form-group mt-5">
                     <span class="mt-5 font-medium font-weight-light color-gray">
-                        Don't have an account? <a href="/register" class="btn-link font-weight-normal">Create one</a>
+                        Don't have an account? <a href="/register" class="btn-link">Create one</a>
                     </span>
                 </div>
             </form>
