@@ -180,6 +180,8 @@ return [
         Jrean\UserVerification\UserVerificationServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Social Authentication Service Provider
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -231,6 +233,9 @@ return [
 
         // Email User Verification Facade
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
+
+        // Social Authentication Facade
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

@@ -65,8 +65,8 @@
                             <span class="input-group-addon" id="age-addon">
                                 <img src="images/ico_user.png">
                             </span>
-                            <input id="age" type="text" name="age" value="{{ old('age') }}" placeholder="Age"
-                                   class="form-control" aria-describedby="age-addon" required>
+                            <input id="age" type="number" name="age" value="{{ old('age') }}" placeholder="Age"
+                                   class="form-control" min="1" max="255" aria-describedby="age-addon" required>
                         </div>
 
                         @if ($errors->has('age'))
@@ -115,7 +115,7 @@
             <div class="form-group mt-3">
                 <span class="mt-5 font-medium font-weight-light color-gray">
                     When you register you agree with our <a href="/privacy-policy" class="btn-link">
-                    Privacy Policy</a> and <a href="/terms-of-use" class="btn-link"> Terms of Use</a>
+                    Privacy Policy</a> and <a href="/terms-of-use" class="btn-link">Terms of Use</a>
                 </span>
             </div>
         </form>
@@ -123,25 +123,25 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group mt-3">
-                    <button class="btn btn-auth btn-social h-70">
+                    <a href="{{ route('socialite.redirectToProvider', ['provider' => 'twitter']) }}" class="btn btn-auth btn-social btn-twitter h-70">
                         ﻿<i class="fa fa-twitter" aria-hidden="true"></i> With Twitter
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mt-3">
-                    <button class="btn btn-auth btn-social h-70">
+                    <a href="{{ route('socialite.redirectToProvider', ['provider' => 'facebook']) }}" class="btn btn-auth btn-social btn-facebook h-70">
                         ﻿<i class="fa fa-facebook" aria-hidden="true"></i> With Facebook
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mt-3">
-                    <button class="btn btn-auth btn-social h-70">
+                    <a href="{{ route('socialite.redirectToProvider', ['provider' => 'google']) }}" class="btn btn-auth btn-social btn-google h-70">
                         ﻿<i class="fa fa-google-plus" aria-hidden="true"></i> With Google
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

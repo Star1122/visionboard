@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use Jrean\UserVerification\Traits\VerifiesUsers;
 use Jrean\UserVerification\Facades\UserVerification;
+use Laravel\Socialite\Facades\Socialite;
 
 class RegisterController extends Controller
 {
@@ -59,8 +61,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'first_name' => 'required|string|max:20',
             'last_name' => 'required|string|max:20',
-            'gender' => 'required|numeric|max:2',
-            'age' => 'required|numeric|max:255',
+            'gender' => 'required|numeric|min:0|max:2',
+            'age' => 'required|numeric|min:1|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);

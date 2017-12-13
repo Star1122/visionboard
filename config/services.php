@@ -35,4 +35,21 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'twitter' => [
+        'client_id' => env('TWITTER_ID'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect' => env('TWITTER_URL')
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_ID'),
+        'client_secret' => env('FACEBOOK_SECRET'),
+        'redirect' => env('FACEBOOK_URL')
+    ],
+
+    'google' => [
+        'client_id' => '36457733320-vk7h27vhpg1lkjhnupns7blf09pud5v9.apps.googleusercontent.com',
+        'client_secret' => 'RPpWyZ7kFGEyaVZXnPEIugmN',
+        'redirect' => 'http://local.visionboard.com:8000/socialite/google/callback'
+    ]
 ];

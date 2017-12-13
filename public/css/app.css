@@ -10259,6 +10259,10 @@ a.text-gray-dark:hover {
   src: url(/fonts/Sansation_Bold_Italic.ttf?ed9223b46a7767df0f842300f83ce157) format("truetype");
 }
 
+* {
+  outline: none !important;
+}
+
 .h-70,
 .btn-xl {
   height: 70px;
@@ -10420,5 +10424,31 @@ body {
 .card .form-group .btn-auth.btn-social {
   border: 2px solid #d6dee4 !important;
   color: #8b939b !important;
+  cursor: pointer;
+}
+
+.card .form-group .btn-auth.btn-social:hover {
+  color: white !important;
+}
+
+.card .form-group .btn-auth.btn-social.btn-twitter:hover {
+  background-color: #1da1f3;
+  border-color: #1da1f3 !important;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(29, 161, 243, 0.6);
+          box-shadow: 0 5px 12px 0 rgba(29, 161, 243, 0.6);
+}
+
+.card .form-group .btn-auth.btn-social.btn-facebook:hover {
+  background-color: #3b5999;
+  border-color: #3b5999 !important;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(59, 89, 153, 0.6);
+          box-shadow: 0 5px 12px 0 rgba(59, 89, 153, 0.6);
+}
+
+.card .form-group .btn-auth.btn-social.btn-google:hover {
+  background-color: #e35743;
+  border-color: #e35743 !important;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(227, 87, 67, 0.6);
+          box-shadow: 0 5px 12px 0 rgba(227, 87, 67, 0.6);
 }
 

@@ -28,6 +28,10 @@ $gray-1: #8b939b;
   box-shadow: $offset $distance $size $spread $color;
 }
 
+* {
+  outline: none !important;
+}
+
 .h-70 {
   height: 70px;
 }
@@ -166,6 +170,29 @@ html, body {
       &.btn-social {
         border: 2px solid #d6dee4 !important;
         color: $gray-1 !important;
+        cursor: pointer;
+        
+        &:hover {
+          color: white !important;
+        }
+
+        &.btn-twitter:hover {
+          background-color: rgb(29, 161, 243);
+          border-color: rgb(29, 161, 243) !important;
+          box-shadow: 0 5px 12px 0 rgba(29, 161, 243, .6);
+        }
+
+        &.btn-facebook:hover {
+          background-color: rgb(59, 89, 153);
+          border-color: rgb(59, 89, 153) !important;
+          box-shadow: 0 5px 12px 0 rgba(59, 89, 153, .6);
+        }
+
+        &.btn-google:hover {
+          background-color: rgb(227, 87, 67);
+          border-color: rgb(227, 87, 67) !important;
+          box-shadow: 0 5px 12px 0 rgba(227, 87, 67, .6);
+        }
       }
     }
 
