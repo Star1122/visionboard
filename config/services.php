@@ -36,15 +36,15 @@ return [
     ],
 
     'twitter' => [
-        'client_id' => env('TWITTER_ID'),
-        'client_secret' => env('TWITTER_SECRET'),
-        'redirect' => env('TWITTER_URL')
+        'client_id' => '﻿4mq5PLlbf1bq4NhPbSv6mEI71',
+        'client_secret' => '﻿MenJRM8NhqVVJdYQ99JkYT61OW3OHNemksWa3FbzADlspT3Mst',
+        'redirect' => 'http://local.visionboard.com:8000/socialite/twitter/callback'
     ],
 
     'facebook' => [
-        'client_id' => env('FACEBOOK_ID'),
-        'client_secret' => env('FACEBOOK_SECRET'),
-        'redirect' => env('FACEBOOK_URL')
+        'client_id' => env('﻿841768146003073'),
+        'client_secret' => env('﻿960ae09353178b18631b0f2409beeb6f'),
+        'redirect' => env('http://local.visionboard.com:8000/socialite/facebook/callback')
     ],
 
     'google' => [

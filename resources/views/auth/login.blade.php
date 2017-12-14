@@ -8,9 +8,9 @@
             <form class="form-horizontal px-4" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
 
-                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <div class="input-group h-70 border-gray round">
-                        <span class="input-group-addon" id="email-addon"><img src="images/ico_user.png"></span>
+                        <span class="input-group-addon" id="email-addon"><img src="/images/ico_user.png"></span>
                         <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="E-mail"
                                class="form-control" aria-describedby="email-addon" required autofocus>
                     </div>
@@ -22,7 +22,7 @@
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                     <div class="input-group h-70 border-gray round">
-                        <span class="input-group-addon" id="password-addon"><img src="images/ico_lock.png"></span>
+                        <span class="input-group-addon" id="password-addon"><img src="/images/ico_lock.png"></span>
                         <input id="password" type="password" name="password" aria-describedby="password-addon"
                                class="form-control" placeholder="*********" required>
                     </div>

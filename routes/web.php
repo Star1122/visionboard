@@ -18,11 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/socialite/{provider}', [
     'as' => 'socialite.redirectToProvider',
-    'uses' => 'Auth\LoginController@redirectToProvider'
+    'uses' => 'Auth\RegisterController@redirectToProvider'
 ]);
+
 Route::get('/socialite/{provider}/callback', [
     'as' => 'socialite.handleCallback',
-    'uses' => 'Auth\LoginController@handleProviderCallback'
+    'uses' => 'Auth\RegisterController@handleProviderCallback'
 ]);

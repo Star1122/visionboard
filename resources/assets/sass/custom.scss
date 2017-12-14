@@ -160,6 +160,7 @@ html, body {
 
     .btn-auth {
       width: 231px;
+      cursor: pointer;
       @extend .border-0, .round, .font-base, .font-medium, .text-white, .text-spacing;
 
       &.btn-login {
@@ -170,8 +171,7 @@ html, body {
       &.btn-social {
         border: 2px solid #d6dee4 !important;
         color: $gray-1 !important;
-        cursor: pointer;
-        
+
         &:hover {
           color: white !important;
         }

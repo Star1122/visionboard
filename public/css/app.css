@@ -10413,6 +10413,7 @@ body {
 
 .card .form-group .btn-auth {
   width: 231px;
+  cursor: pointer;
 }
 
 .card .form-group .btn-auth.btn-login {
@@ -10424,7 +10425,6 @@ body {
 .card .form-group .btn-auth.btn-social {
   border: 2px solid #d6dee4 !important;
   color: #8b939b !important;
-  cursor: pointer;
 }
 
 .card .form-group .btn-auth.btn-social:hover {
