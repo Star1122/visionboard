@@ -36,20 +36,20 @@ return [
     ],
 
     'twitter' => [
-        'client_id' => '﻿4mq5PLlbf1bq4NhPbSv6mEI71',
-        'client_secret' => '﻿MenJRM8NhqVVJdYQ99JkYT61OW3OHNemksWa3FbzADlspT3Mst',
-        'redirect' => 'http://local.visionboard.com:8000/socialite/twitter/callback'
+        'client_id' => env('TWITTER_ID'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect' => env('TWITTER_URL')
     ],
 
     'facebook' => [
-        'client_id' => env('﻿841768146003073'),
-        'client_secret' => env('﻿960ae09353178b18631b0f2409beeb6f'),
-        'redirect' => env('http://local.visionboard.com:8000/socialite/facebook/callback')
+        'client_id' => env('FACEBOOK_ID'),
+        'client_secret' => env('FACEBOOK_SECRET'),
+        'redirect' => env('FACEBOOK_URL')
     ],
 
     'google' => [
-        'client_id' => '36457733320-vk7h27vhpg1lkjhnupns7blf09pud5v9.apps.googleusercontent.com',
-        'client_secret' => 'RPpWyZ7kFGEyaVZXnPEIugmN',
-        'redirect' => 'http://local.visionboard.com:8000/socialite/google/callback'
+        'client_id' => env('GOOGLE_ID'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_URL')
     ]
 ];
